@@ -12,3 +12,8 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
+
+.left {
+    background-image: url('bagels.jpg');
+    background-size: cover;
+}
