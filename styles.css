@@ -20,9 +20,12 @@ body {
 
 .top {
     display: flex;
+    
 }
 
 .top p {
     padding-left: 1em;
     align-self: flex-end;
+    font-weight: bold;
+    font-size: 1.2em;
 }
