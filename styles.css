@@ -17,3 +17,12 @@ body {
     background-image: url('bagels.jpg');
     background-size: cover;
 }
+
+.top {
+    display: flex;
+}
+
+.top p {
+    padding-left: 1em;
+    align-self: flex-end;
+}
