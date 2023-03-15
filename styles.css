@@ -1,4 +1,4 @@
-div {
+* {
     border: 1px solid red;
 }
 
@@ -18,10 +18,13 @@ body {
     background-size: cover;
 }
 
-.top {
-    display: flex;
-    
+.top, .bottom {
+    background-color: #F9FAFB;
 }
+.tophalf {
+    height: 50%;
+}
+
 
 .top p {
     padding-left: 1em;
