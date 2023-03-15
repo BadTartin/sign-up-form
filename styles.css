@@ -21,14 +21,22 @@ body {
 .top, .bottom {
     background-color: #F9FAFB;
 }
+
 .tophalf {
     height: 50%;
 }
-
 
 .top p {
     padding-left: 1em;
     align-self: flex-end;
     font-weight: bold;
     font-size: 1.2em;
+}
+
+button {
+    margin: 1em;
+    border-radius: 4px;
+    background-color: #ae622e;
+    color:#F9FAFB;
+    padding: 10px 20px 10px 20px;
 }
