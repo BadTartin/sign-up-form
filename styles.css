@@ -26,8 +26,13 @@ body {
     height: 50%;
 }
 
-.top p {
+p {
     padding-left: 1em;
+    /* font-size: 1.2em; */
+}
+
+.top p {
+    /* padding-left: 1em; */
     align-self: flex-end;
     font-weight: bold;
     font-size: 1.2em;
@@ -38,5 +43,5 @@ button {
     border-radius: 4px;
     background-color: #ae622e;
     color:#F9FAFB;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 30px 10px 30px;
 }
