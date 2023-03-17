@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 body {
     display: grid;
@@ -45,4 +45,17 @@ button {
     color:#F9FAFB;
     padding: 10px 30px 10px 30px;
     font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: .7em;
+    margin-left: 1em;
+}
+
+fieldset {
+    display: flex;
+    margin: 1em;
+    border: 0em;
 }
