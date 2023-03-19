@@ -26,31 +26,31 @@
                 <fieldset>
                     <form action="example.com/path" method="post">
                         <label for="first_name">FIRST NAME:</label>
-                        <input type="text" id="first_name">
+                        <input type="text" id="first_name" required>
                     </form>
                     <form action="example.com/path" method="post">
                         <label for="last_name">LAST NAME:</label>
-                        <input type="text" id="last_name">
+                        <input type="text" id="last_name" required>
                     </form>
                 </fieldset>
                 <fieldset>
                     <form action="example.com/path" method="post">
                         <label for="email">EMAIL:</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" required>
                     </form>
                     <form action="example.com/path" method="post">
                         <label for="phone_num">PHONE:</label>
-                        <input type="text" id="phone_num">
+                        <input type="text" id="phone_num" pattern="^\d{3}-?\d{3}-?\d{4}$">
                     </form>
                 </fieldset>
                 <fieldset>
                     <form action="example.com/path" method="post">
                         <label for="password">PASSWORD:</label>
-                        <input type="password" id="password">
+                        <input type="password" id="password" required minlength="8">
                     </form>
                     <form action="example.com/path" method="post">
                         <label for="password_con">CONFIRM PASSWORD:</label>
-                        <input type="password" id="password_con">
+                        <input type="password" id="password_con" required minlength="8">
                     </form>
                 </fieldset>
             </div>
