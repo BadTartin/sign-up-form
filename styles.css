@@ -2,6 +2,10 @@
     border: 1px solid red;
 } */
 
+
+/* @media settings */
+/* validation settings */
+
 @font-face {
     font-family: Norse-Bold;
     src: url(Norse-Bold.otf);
@@ -97,12 +101,48 @@ input {
 }
 
 input:focus {
-    border: 1px solid rgba(125, 125, 193, 0.2); 
+    border-color: rgba(125, 125, 193, 0.2); 
     /* box-shadow: 3px 3px 2px rgba(3, 3, 3, .1); */
     box-shadow: 5px 5px 10px lightgrey;
     /* outline: lightblue; */
 }
 
-input:invalid {
+input:not(:placeholder-shown):invalid {
     border: 1px solid red; 
 }
+
+input:valid {
+    border: 1px solid blue; 
+}
+
+
+/* Javascript function for validation???
+
+function validateInput(event) {
+  if (event.target.validity.valid) {
+    event.target.style.border = ''; 
+  } else {
+    event.target.style.border = '1px solid red'; 
+  }
+}
+
+input {
+  border: 1px solid #ccc;
+} 
+
+input:focus {
+  border: 1px solid red; 
+} */
+
+/* A better solution for this use case is to use the :invalid:valid selector.
+This will select inputs that are:
+
+:invalid - Invalid (doesn't validate based on its rules, like required or type mismatch)
+:valid - But only after they have been modified (on blur or input event).
+
+So you can do:
+input:invalid:valid {
+    border: 1px solid red; 
+}
+
+This will ensure the red border only shows up after the user has interacted with the input, and it's still invalid. */
