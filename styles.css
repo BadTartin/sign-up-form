@@ -18,7 +18,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 3fr;
     height: 100vh;
 }
 
@@ -36,7 +36,7 @@ body {
 .logodiv {
     background-color: rgb(0, 0, 0, .4);
     color: white;
-    font-size: 32px;
+    font-size: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,6 @@ body {
 
 
 .top, .middle p {
-    /* padding-left: 1em; */
     align-self: flex-end;
     font-weight: bold;
     font-size: 1.2em;
@@ -81,17 +80,18 @@ button {
     font-weight: bold;
 }
 
-form {
+fieldset {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    border: 0em;
+}
+
+.input_set {
     display: flex;
     flex-direction: column;
     font-size: .7em;
     margin-left: 2em;
-}
-
-fieldset {
-    display: flex;
-    margin: 1em;
-    border: 0em;
 }
 
 input {
@@ -107,7 +107,7 @@ input:focus {
     /* outline: lightblue; */
 }
 
-input:not(:placeholder-shown):invalid {
+input:not(:focus):not(:placeholder-shown):invalid {
     border: 1px solid red; 
 }
 
@@ -115,34 +115,13 @@ input:valid {
     border: 1px solid blue; 
 }
 
-
-/* Javascript function for validation???
-
-function validateInput(event) {
-  if (event.target.validity.valid) {
-    event.target.style.border = ''; 
-  } else {
-    event.target.style.border = '1px solid red'; 
-  }
+#errormsg {
+    color: rgba(255, 0, 0, 0);
+    font-size: .75em;
+    /* text-align: left; */
 }
 
-input {
-  border: 1px solid #ccc;
-} 
-
-input:focus {
-  border: 1px solid red; 
-} */
-
-/* A better solution for this use case is to use the :invalid:valid selector.
-This will select inputs that are:
-
-:invalid - Invalid (doesn't validate based on its rules, like required or type mismatch)
-:valid - But only after they have been modified (on blur or input event).
-
-So you can do:
-input:invalid:valid {
-    border: 1px solid red; 
+button:hover{
+   box-shadow: 5px 5px 15px lightgrey;
+   /* border-color:rgba(125, 125, 193, 0.2) */
 }
-
-This will ensure the red border only shows up after the user has interacted with the input, and it's still invalid. */
